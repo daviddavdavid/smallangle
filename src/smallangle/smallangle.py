@@ -42,9 +42,9 @@ def tan(number):
 @cmd_group.command()
 @click.argument("epsilon", type=float)
 def approx(epsilon):
-    """Finds the largest x where the sin approximation for a given EPSILON does not hold anymore with an accuracy of 0.001.
+    """Finds the largest x for a sin approx for an epsilon.
 
-    EPSILON is the number (of type float) where | sin(x) - x | must be <= EPSILON.
+    EPSILON is the number (float) where |sin(x) - x| must be <= EPSILON.
     """
     x = 0
     while np.abs(np.sin(x) - x) <= epsilon:
