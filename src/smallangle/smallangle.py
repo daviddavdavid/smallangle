@@ -12,11 +12,13 @@ def cmd_group():
     "--number",
     "-n",
     default=10,
-    help="Gives the user the control to decide the amount of steps.",
-    show_default=True,
 )
 
 def sin(number):
+    """Runs the sin function for NUMBER amount of steps.
+
+    NUMBER is the amount of steps.
+    """
     x = np.linspace(0, 2 * pi, number)
     df = pd.DataFrame({"x": x, "sin (x)": np.sin(x)})
     print(df)
@@ -26,10 +28,12 @@ def sin(number):
     "--number",
     "-n",
     default=10,
-    help="Gives the user the control to decide the amount of steps.",
-    show_default=True,
 )
 def tan(number):
+    """Runs the tan command for NUMBER amount of steps.
+
+    NUMBER is the amount of steps.
+    """
     x = np.linspace(0, 2 * pi, number)
     df = pd.DataFrame({"x": x, "tan (x)": np.tan(x)})
     print(df)
